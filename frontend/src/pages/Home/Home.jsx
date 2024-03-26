@@ -1,13 +1,22 @@
 import logo from './logo.svg';
 import './Home.css';
+import React, { useState } from 'react';
+import {useEffect} from 'react';
 
 function Home() {
+  const [movieName, setMovieName] = useState('');
+  const [movies, setMovies]=useState(0);
+  useEffect(()=>{
+    return (<p>Bonjour</p>)=>{}
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <input id="input" type="text" placeholder="Movie Name" value={movieName} onChange={(event) =>
+            setMovieName(event.target.value )} /> 
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          {movieName}
         </p>
         <a
           className="App-link"
