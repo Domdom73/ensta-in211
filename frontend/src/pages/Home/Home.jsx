@@ -25,6 +25,7 @@ const useFetchMovies = () => {
 
 function Home() {
   const {movies} = useFetchMovies();
+  console.log(movies);
   return (
     <div className="App">
       <ul>
